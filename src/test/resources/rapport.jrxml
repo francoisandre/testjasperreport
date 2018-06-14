@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8dca2fc2-598a-4e8f-8235-c5207ff068fc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#CCCCCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#CCCCCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Livres dataset" whenResourceMissingType="Empty" uuid="c968eb62-ec09-4c26-9c10-a486c0143ad1">
+		<field name="titre" class="java.lang.String"/>
+		<field name="note" class="java.lang.Integer"/>
+	</subDataset>
+	<field name="nom" class="java.lang.String"/>
+	<field name="prenom" class="java.lang.String"/>
+	<field name="age" class="java.lang.Integer"/>
+	<field name="livres" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="51" backcolor="#CCCCCC" uuid="72d75cda-0a5d-4bcc-9212-70504e244e63"/>
+				<textElement>
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[Fiche Auteur]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="48" width="555" height="2" forecolor="#666666" backcolor="#666666" uuid="14b81e65-d9fb-4871-8c25-97ee641e4923"/>
+			</rectangle>
+		</band>
+	</title>
+	<detail>
+		<band height="252" splitType="Stretch">
+			<textField>
+				<reportElement x="120" y="-10" width="100" height="20" uuid="8fea2d3d-68e2-441f-a692-58dc59e65d31"/>
+				<textFieldExpression><![CDATA[$F{nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="10" width="100" height="20" uuid="cad72ab9-3f5d-4d9a-87f5-d7b1e01f0421"/>
+				<textFieldExpression><![CDATA[$F{prenom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="30" width="100" height="20" uuid="d336c7ce-0314-4dae-9714-0f65f3c45676"/>
+				<textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="-10" width="100" height="20" uuid="2450ede5-72ed-4a2b-8e33-6fb793ee7419"/>
+				<text><![CDATA[Nom:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="100" height="20" uuid="6b299245-c013-4ae1-b7f2-663cbe4335a0"/>
+				<text><![CDATA[Prénom:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="100" height="20" uuid="437db08d-d05e-45c8-af09-b8933e241173"/>
+				<text><![CDATA[Age:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement key="table 3" style="table 3" x="0" y="103" width="555" height="130" uuid="51e166aa-7bf4-4e36-880b-1561b8004831"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Livres dataset" uuid="5ebbaff0-fcd7-40d6-9707-e72d3cbfddbc">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{livres})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="295" uuid="e6e6183e-b951-48be-b67d-845556ff1603">
+						<jr:columnHeader style="table 3_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="295" height="30" uuid="ec429947-b9ec-4cd1-9a9e-2aa19eb1e400"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="false"/>
+								</textElement>
+								<text><![CDATA[Titre]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 3_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="0a6a259d-b3fe-4bc3-a3a2-b8085da2d773"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{titre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="260" uuid="639f41c8-0bb8-4e5b-87f2-5dd6063f81e5">
+						<jr:columnHeader style="table 3_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="260" height="30" uuid="175dc378-36ec-474d-bb76-ad4ef1fb6aa7"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Note]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 3_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="deeb7fa9-56f3-4f09-b751-0dcf4c4b8e55"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{note}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="60" width="555" height="31" backcolor="#CCCCCC" uuid="cf723e9b-dac3-43f5-9ff7-1d6dd8a3ccf6"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Livres]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="91" width="555" height="2" forecolor="#666666" backcolor="#666666" uuid="68d61d7f-872d-4a44-8121-267e8ecee797"/>
+			</rectangle>
+		</band>
+	</detail>
+</jasperReport>
